@@ -12,8 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      home: Center(
-        child: Container(width: 50, height: 50, color: Colors.blue ),
+      home: Scaffold( // 상중하로 나눠주는 Scaffold() 위젯
+        appBar: AppBar(),
+        body: Container(),
+        bottomNavigationBar: BottomAppBar( child: Text('sujin')),
       )
     );
 
