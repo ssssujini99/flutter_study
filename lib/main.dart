@@ -14,7 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold( // 상중하로 나눠주는 Scaffold() 위젯
         appBar: AppBar(),
-        body: Container(),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.center, // 가운데 정렬
+          children: [
+            Icon(Icons.star),
+            Icon(Icons.access_time_sharp),
+            Icon(Icons.star),
+          ],
+        ),
         bottomNavigationBar: BottomAppBar( child: Text('sujin')),
       )
     );
