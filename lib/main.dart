@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(const MyApp()); // 앱 구동 시작 // 앱 메인페이지 입력하면 됨
@@ -16,10 +17,15 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('오쥬'),
         ),
-        body: Row(
-          children: [
-            Text('칵테일 추천 서비스 오쥬입니다.'),
-          ],
+        body: Center(
+          child: Container(
+            width: 300, height: 200, // color: Colors.blue,
+            padding: EdgeInsets.fromLTRB(100, 20, 30, 50),
+            child: Text('안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요'),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black, width: 5),
+            ),
+          ),
         ),
         bottomNavigationBar: BottomAppBar(
           child: SizedBox( // width, height, child만 필요한 박스는 SizedBox
