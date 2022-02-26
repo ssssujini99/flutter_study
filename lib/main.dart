@@ -22,25 +22,28 @@ class MyApp extends StatelessWidget {
           ],
         ),
         bottomNavigationBar: BottomAppBar(
-
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              IconButton(
-                icon: Icon(Icons.phone),
-                onPressed: (){},
-              ),
-              // Spacer(),
-              IconButton(
-                icon: Icon(Icons.message),
-                onPressed: (){},
-              ),
-              // Spacer(),
-              IconButton(
-                icon: Icon(Icons.contact_page),
-                onPressed: (){},
-              )
-            ]
+          child: SizedBox( // width, height, child만 필요한 박스는 SizedBox
+            height: 70,
+            // color: Colors.black12,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  icon: Icon(Icons.phone),
+                  onPressed: (){},
+                ),
+                // Spacer(),
+                IconButton(
+                  icon: Icon(Icons.message),
+                  onPressed: (){},
+                ),
+                // Spacer(),
+                IconButton(
+                  icon: Icon(Icons.contact_page),
+                  onPressed: (){},
+                )
+              ]
+            ),
           )
         ),
       ),
