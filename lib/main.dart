@@ -12,18 +12,38 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      home: Scaffold( // 상중하로 나눠주는 Scaffold() 위젯
-        appBar: AppBar(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('오쥬'),
+        ),
         body: Row(
-          mainAxisAlignment: MainAxisAlignment.center, // 가운데 정렬
           children: [
-            Icon(Icons.star),
-            Icon(Icons.access_time_sharp),
-            Icon(Icons.star),
+            Text('칵테일 추천 서비스 오쥬입니다.'),
           ],
         ),
-        bottomNavigationBar: BottomAppBar( child: Text('sujin')),
-      )
+        bottomNavigationBar: BottomAppBar(
+
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              IconButton(
+                icon: Icon(Icons.phone),
+                onPressed: (){},
+              ),
+              // Spacer(),
+              IconButton(
+                icon: Icon(Icons.message),
+                onPressed: (){},
+              ),
+              // Spacer(),
+              IconButton(
+                icon: Icon(Icons.contact_page),
+                onPressed: (){},
+              )
+            ]
+          )
+        ),
+      ),
     );
 
   }
